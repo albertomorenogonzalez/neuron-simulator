@@ -129,7 +129,7 @@ for i in range(0, entry_num):
         st.markdown(f"Peso w<sub>{i}</sub>", unsafe_allow_html=True)
         weights.append(st.number_input(f"w{i}", key=f"w{i}", label_visibility="collapsed"))
 
-st.write("w = ", weights)
+st.write(f"w = {weights}")
 
 
 st.subheader("Entradas")
@@ -138,10 +138,10 @@ entries = []
 for i in range(0, entry_num):
 
     with columns[i]:
-        st.markdown(f"Peso x<sub>{i}</sub>", unsafe_allow_html=True)
+        st.markdown(f"Entrada x<sub>{i}</sub>", unsafe_allow_html=True)
         entries.append(st.number_input(f"x{i}", key=f"x{i}", label_visibility="collapsed"))
 
-st.write("w = ", entries)
+st.write(f"x = {entries}")
 
 
 colBias, colActivation = st.columns(2)
