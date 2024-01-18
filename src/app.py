@@ -120,12 +120,12 @@ entry_num = st.slider("Elige el número de entradas/pesos que tendrá la neurona
 st.subheader("Pesos")
 weights = []
 
-columns = st.columns(entry_num)
+weight_columns = st.columns(entry_num)
 
 
 for i in range(0, entry_num):
 
-    with columns[i]:
+    with weight_columns[i]:
         st.markdown(f"Peso w<sub>{i}</sub>", unsafe_allow_html=True)
         weights.append(st.number_input(f"w{i}", key=f"w{i}", label_visibility="collapsed"))
 
@@ -135,9 +135,11 @@ st.write(f"w = {weights}")
 st.subheader("Entradas")
 entries = []
 
+entry_columns = st.columns(entry_num)
+
 for i in range(0, entry_num):
 
-    with columns[i]:
+    with entry_columns[i]:
         st.markdown(f"Entrada x<sub>{i}</sub>", unsafe_allow_html=True)
         entries.append(st.number_input(f"x{i}", key=f"x{i}", label_visibility="collapsed"))
 
