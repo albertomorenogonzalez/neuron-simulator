@@ -124,14 +124,14 @@ weight_columns = st.columns(entry_num)
 for i in range(0, entry_num):
 
     with weight_columns[i]:
-        st.markdown("Peso w<sub>{i}</sub>", unsafe_allow_html=True)
+        st.markdown(f"Peso w<sub>{i}</sub>", unsafe_allow_html=True)
         st.number_input(f"w{i}", key=f"w{i}", label_visibility="invisible")
 
 st.subheader("Entradas")
 
 for i in range(0, entry_num):
 
-    st.markdown("Peso x<sub>{i}</sub>", unsafe_allow_html=True)
+    st.markdown(f"Peso x<sub>{i}</sub>", unsafe_allow_html=True)
     st.number_input(f"x{i}", key=f"x{i}", label_visibility="invisible")
 
 colBias, colActivation = st.columns(2)
