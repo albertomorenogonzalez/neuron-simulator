@@ -97,11 +97,11 @@ class Neuron:
         """
         y = sum(np.multiply(input_data, self.weights)) + self.bias
 
-        if self.func == "sigmoid":
+        if self.func == "Sigmoide":
             return self.sigmoid(y)
-        elif self.func == "relu":
+        elif self.func == "ReLU":
             return self.relu(y)
-        elif self.func == "tanh":
+        elif self.func == "Tanh":
             return self.tanh(y)
 
 
@@ -151,18 +151,23 @@ colBias, colActivation = st.columns(2)
 
 with colBias:
     st.subheader("Sesgo")
-    st.number_input("Introduce el valor del sesgo")
+    bias = st.number_input("Introduce el valor del sesgo")
 
 with colActivation:
     st.subheader("Función de Activación")
-    st.selectbox(
+    function = st.selectbox(
         'Elige la función de activación',
         ('Sigmoide', 'ReLU', 'Tanh')
     )
 
 
+# Instancia de la neurona y cálculos
+n = Neuron(weights, bias, function)
+output = n.predict(entries)
+
+
 if st.button("Calcular la salida"):
-        st.write("La salida de la neurona es ")
+        st.write(f"La salida de la neurona es {output}")
 
 
 
