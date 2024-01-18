@@ -117,7 +117,7 @@ class Neuron:
 
 entry_num = st.slider("Elige el número de entradas/pesos que tendrá la neurona", 1, 10)
 
-st.subtitle("Pesos")
+st.subheader("Pesos")
 
 for i in entry_num:
     st.number_input("w"+i, key="w"+i)
@@ -130,9 +130,9 @@ for i in entry_num:
 colBias, colActivation = st.columns(2)
 
 with colBias:
-    st.subtitle("Sesgo")
+    st.subheader("Sesgo")
     st.number_input("Introduce el valor del sesgo")
 
 with colActivation:
-    st.subtitle("Función de Activación")
+    st.subheader("Función de Activación")
     st.select("")
