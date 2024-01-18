@@ -120,12 +120,12 @@ entry_num = st.slider("Elige el número de entradas/pesos que tendrá la neurona
 st.subheader("Pesos")
 
 for i in range(entry_num):
-    st.number_input("w{i}", key="w{i}")
+    st.number_input(f"w{i}", key=f"w{i}")
 
-st.subtitle("Entradas")
+st.subheader("Entradas")
 
 for i in range(entry_num):
-    st.number_input(f"x{i}", key="x{i}")
+    st.number_input(f"x{i}", key=f"x{i}")
 
 colBias, colActivation = st.columns(2)
 
