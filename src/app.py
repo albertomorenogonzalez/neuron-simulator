@@ -123,7 +123,7 @@ weight_columns = st.columns(entry_num)
 
 for i in range(0, entry_num):
 
-    with weight_columns(i)
+    with weight_columns(i):
         st.markdown("Peso w<sub>{i}</sub>", unsafe_allow_html=True)
         st.number_input(f"w{i}", key=f"w{i}", label_visibility="invisible")
 
