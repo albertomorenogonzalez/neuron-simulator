@@ -3,7 +3,7 @@ import numpy as np
 
 st.set_page_config(page_title="Simulador de Neurona")
 
-st.image("media/neurons.jpg", width=100%)
+st.image("media/neurons.jpg", width="100%")
 
 st.title('Simulador de Neurona')
 
