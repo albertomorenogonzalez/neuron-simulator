@@ -1,6 +1,6 @@
 # Simulador de Neurona
 
-Aplicación alojada en Streamlit que simula un perceptrón con unos comportamientos especificados.
+Aplicación alojada en Streamlit que simula una neurona (perceptrón) con unos comportamientos especificados.
 
 Link a la Aplicación: 
 [https://neuron-simulator.streamlit.app/](https://neuron-simulator.streamlit.app/)
