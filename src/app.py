@@ -118,23 +118,34 @@ class Neuron:
 entry_num = st.slider("Elige el número de entradas/pesos que tendrá la neurona", 1, 10)
 
 st.subheader("Pesos")
+weights = []
 
-weight_columns = st.columns(entry_num)
+columns = st.columns(entry_num)
+
 
 for i in range(0, entry_num):
 
-    with weight_columns[i]:
+    with columns[i]:
         st.markdown(f"Peso w<sub>{i}</sub>", unsafe_allow_html=True)
-        st.number_input(f"w{i}", key=f"w{i}", label_visibility="collapsed")
+        weights.append(st.number_input(f"w{i}", key=f"w{i}", label_visibility="collapsed"))
+
+st.write("w = ", weights)
+
 
 st.subheader("Entradas")
+entries = []
 
 for i in range(0, entry_num):
 
-    st.markdown(f"Peso x<sub>{i}</sub>", unsafe_allow_html=True)
-    st.number_input(f"x{i}", key=f"x{i}", label_visibility="collapsed")
+    with columns[i]:
+        st.markdown(f"Peso x<sub>{i}</sub>", unsafe_allow_html=True)
+        entries.append(st.number_input(f"x{i}", key=f"x{i}", label_visibility="collapsed"))
+
+st.write("w = ", entries)
+
 
 colBias, colActivation = st.columns(2)
+
 
 with colBias:
     st.subheader("Sesgo")
@@ -146,3 +157,14 @@ with colActivation:
         'Elige la función de activación',
         ('Sigmoide', 'ReLU', 'Tanh')
     )
+
+
+if st.button("Calcular la salida"):
+        st.write("La salida de la neurona es ")
+
+
+
+st.divider()
+
+st.write("Autor: Alberto Moreno González - ")
+st.write("Máster FP en Inteligencia Artificial y Big Data del Centro Integrado en CPIFP Alan Turing (Málaga)")
