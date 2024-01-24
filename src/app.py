@@ -8,21 +8,20 @@ import numpy as np
 from neuron import Neuron
 
 # We set the name of the page in the top of the tap
-st.set_page_config(page_title="Simulador de Neurona", layout="wide")
-# st.set_page_config(layout="wide")
+st.set_page_config(page_title="Simulador de Neurona")
 
 # We set the style of the page, first in a variable
 # and then applied with an st.markdown.
 
-# style = f"""
-# <style>
-#    .appview-container .main .block-container{{
-#        max-width: 90%
-#    }}
-# </style>
-# """
+style = f"""
+<style>
+   .appview-container .main .block-container{{
+       max-width: 90%
+   }}
+</style>
+"""
 
- # st.markdown(style, unsafe_allow_html=True)
+st.markdown(style, unsafe_allow_html=True)
 
 # We set the image and title
 st.image("media/neurons.jpg", use_column_width="always")
