@@ -75,14 +75,12 @@ with colActivation:
     )
 
 
-# Neuron instance and operations
-n = Neuron(weights=[0.5, 1.2, 6.8], bias=100, func="relu")
-output = n.predict([4, 6, -3])
-print(output)
-
-
 # We set the button to run and show the results
 if st.button("Calcular la salida"):
+        # Neuron instance and operations
+        n = Neuron(weights=[0.5, 1.2, 6.8], bias=100, func="relu")
+        output = n.predict(entries)
+
         st.write(f"La salida de la neurona es {output}")
 
 
