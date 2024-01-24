@@ -78,6 +78,7 @@ with colActivation:
 # Neuron instance and operations
 n = Neuron(weights, bias, function)
 output = n.predict(entries)
+st.write(n.activation_function)
 
 
 # We set the button to run and show the results

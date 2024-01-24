@@ -101,10 +101,6 @@ class Neuron:
         """
         for member_name, member_value in inspect.getmembers(Neuron):
             if re.search(activation_function, member_name):
-                st.write(activation_function)
-                st.write(member_name)
-                st.write(member_value)
-                st.write(member_value(y))
                 return member_value(y)
 
 
