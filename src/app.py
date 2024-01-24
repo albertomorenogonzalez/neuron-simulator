@@ -71,22 +71,14 @@ with colActivation:
     st.subheader("Función de Activación")
     function = st.selectbox(
         'Elige la función de activación',
-        ('Sigmoide', 'ReLU', 'Tanh')
+        ('Sigmoid', 'ReLU', 'Tanh')
     )
-
-st.write(weights)
-st.write(type(weights))
-st.write(entries)
-st.write(type(entries))
-st.write(bias)
-st.write(function)
-st.write(type(function))
 
 
 # We set the button to run and show the results
 if st.button("Calcular la salida"):
         # Neuron instance and operations
-        n = Neuron(weights, bias, function)
+        n = Neuron(weights, bias, function.lower())
         output = n.predict(entries)
 
         st.write(f"La salida de la neurona es {output}")
