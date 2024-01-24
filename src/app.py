@@ -74,6 +74,14 @@ with colActivation:
         ('Sigmoide', 'ReLU', 'Tanh')
     )
 
+st.write(weights)
+st.write(type(weights))
+st.write(entries)
+st.write(type(entries))
+st.write(bias)
+st.write(function)
+st.write(type(function))
+
 
 # We set the button to run and show the results
 if st.button("Calcular la salida"):
