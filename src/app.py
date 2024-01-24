@@ -76,9 +76,8 @@ with colActivation:
 
 
 # Neuron instance and operations
-n = Neuron(weights, bias, function)
-output = n.predict(entries)
-print(n)
+n = Neuron(weights=[0.5, 1.2, 6.8], bias=100, func="relu")
+output = n.predict([4, 6, -3])
 print(output)
 
 
