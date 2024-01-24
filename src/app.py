@@ -1,6 +1,5 @@
 # Library imports
 import streamlit as st
-import numpy as np
 
 # Neuron class import
 # The class is located in another file in this directory
